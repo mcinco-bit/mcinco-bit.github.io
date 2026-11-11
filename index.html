@@ -1,6 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- THIS CODE IS FOR TESTING PURPOSE ONLY, DO NOT USE IT IN PRODUCTION. 
+After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'ed91c418-0537-4d55-90cb-bcb3c584dd65');
+	s.setAttribute('data-domain-uuid', 'd5a37f7d-4897-4ee5-a9a0-f8d72fd18f8b');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.setAttribute('data-securiti-staging-mode', 'true');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script> 
+
+
+Deployment Code: 
+Add the following code at the beginning of the </head> tag:
+
+
+<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', 'ed91c418-0537-4d55-90cb-bcb3c584dd65');
+	s.setAttribute('data-domain-uuid', 'd5a37f7d-4897-4ee5-a9a0-f8d72fd18f8b');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script> 
+
+
+Auto-blocking Testing Code: 
+Use the following test code in your staging website before deploying it to your production website
+Add the following code at the beginning of the </head> tag:
+
+<!-- THIS CODE IS FOR TESTING PURPOSE ONLY, DO NOT USE IT IN PRODUCTION.-->
+<script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/auto_blocking/ed91c418-0537-4d55-90cb-bcb3c584dd65/d5a37f7d-4897-4ee5-a9a0-f8d72fd18f8b-test.js"></script> 
+
+
+Auto-blocking Deployment Code: 
+Add the following code at the beginning of the </head> tag:
+
+<script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/auto_blocking/ed91c418-0537-4d55-90cb-bcb3c584dd65/d5a37f7d-4897-4ee5-a9a0-f8d72fd18f8b.js"></script> 
+
+
+Revoke Button Code: 
+(Optional) Add the following code just after the banner snippet to re-invoke the preference center with a button or link: 
+
+<!-- You may style the button by overriding class "cmp-revoke-consent" -->
+<button class="cmp-revoke-consent">Manage Cookie Preferences</button>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Harbor &amp; Pine Coffee Co.</title>
