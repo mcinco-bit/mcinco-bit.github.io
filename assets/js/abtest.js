@@ -1,4 +1,5 @@
-  <!-- A/B test bucket. Assigns the visitor to a homepage variant. -->
+  /* A/B test bucket. Assigns the visitor to a homepage variant.  */
+
   <script>
     (function () {
       if (document.cookie.indexOf('hp_ab_variant=') === -1) {
